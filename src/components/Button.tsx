@@ -5,13 +5,12 @@ import { ReactNode } from 'react';
 
 
 export interface ButtonProps {
-  size?:'sm' | 'md' | 'lg',
   children: ReactNode,
   asChild?: boolean,
 }
 
 
-export function Button ({size = 'md', children, asChild}: ButtonProps){
+export function Button ({ children, asChild}: ButtonProps){
   const Comp = asChild ? Slot : 'button'
   return(
     <Comp className ={clsx(
